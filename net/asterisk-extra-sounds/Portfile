@@ -1,0 +1,164 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; truncate-lines: t; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:et:sw=4:ts=4:sts=4
+# $Id: Portfile 71540 2010-09-16 03:39:03Z jmr@macports.org $
+
+PortSystem          1.0
+
+name                asterisk-extra-sounds
+version             1.4.11
+license             GPLv2
+categories          net
+platforms           darwin
+maintainers         
+
+description         Extra Sound files for the Asterisk Open Source PBX and telephony toolkit
+                
+homepage            http://www.asterisk.org
+master_sites        http://downloads.asterisk.org/pub/telephony/sounds/releases/                    
+
+default_variants    +en +gsm
+
+distfiles
+
+use_configure       no
+
+checksums           asterisk-extra-sounds-en-wav-1.4.11.tar.gz \
+                    md5     1dff0265f8051d4ee44d6772bd93d528 \
+                    sha1    64d5a4e4eb9c84db3de9b28c902b6ea66fca9bf9 \
+                    rmd160  b57a3e1b7805444aec9785cb555b13173c4c4f65 \
+                    asterisk-extra-sounds-en-ulaw-1.4.11.tar.gz \
+                    md5     556a9b77235194644d6a7f7068d3ddaa \
+                    sha1    ff86a42e29fc31ab4c4c87561c6295356316b5db \
+                    rmd160  17b84aba2ae40073f2cf22757b27c17055610d8a \
+                    asterisk-extra-sounds-en-alaw-1.4.11.tar.gz \
+                    md5     3a0bfe79e9e83d12a4b519dab1dc4c48 \
+                    sha1    e1eb451df3d7108e30693d0df559a9d0aeaccf25 \
+                    rmd160  2c307146e6903abb746c2bf79c962fe41ac8e84c \
+                    asterisk-extra-sounds-en-gsm-1.4.11.tar.gz \
+                    md5     5479cb4cb81d678304d96f35e4933a11 \
+                    sha1    8692fa61423b4769dc8bfa78faf9ed5ef7a259b9 \
+                    rmd160  68170c769d739d6b5b35b00f999ad6bbf876f9f6 \
+                    asterisk-extra-sounds-en-g729-1.4.11.tar.gz \
+                    md5     ae5e738ab6b2b15834a907cdd982cb77 \
+                    sha1    cec2e7c9f5a9e746eea90a0861000c63e4d057ff \
+                    rmd160  3baf6b60e7a4466425e84d93bd5109721abb4493 \
+                    asterisk-extra-sounds-en-g722-1.4.11.tar.gz \
+                    md5     be2bfa1ab8e52ed334798d11549653b1 \
+                    sha1    9ca6d373997827785f623a9bfce63ba7f2a47cb4 \
+                    rmd160  dcc6bd91486ff84692364219f7fbac59d507832b \
+                    asterisk-extra-sounds-en-sln16-1.4.11.tar.gz \
+                    md5     1ed34b754c9729f45a290441d458eede \
+                    sha1    9a83761e421e3e72699d87222e0c1487d7601f7f \
+                    rmd160  8c6c1d32593ed871d417695330cc8afba9516015 \
+                    asterisk-extra-sounds-en-siren7-1.4.11.tar.gz \
+                    md5     38326a003d905fea32f4cad3b075ee0d \
+                    sha1    b845f5ff200cf5431f8beb284a9ddff63121ba68 \
+                    rmd160  32dd6c0cba89570c4895c73980e17914246ebac7 \
+                    asterisk-extra-sounds-en-siren14-1.4.11.tar.gz \
+                    md5     cf518c3b4e8293680377a312d365e095 \
+                    sha1    779e7bdf760854ec7be9c720d94f747329738a42 \
+                    rmd160  a5e8d41066dfc39b02646766b901332cfddd9ee3 \
+                    asterisk-extra-sounds-fr-wav-1.4.11.tar.gz \
+                    md5     e7836238d8d74dcecf72f384731217f9 \
+                    sha1    c53f9610121dc2c2cc44f46d36972569faf1f750 \
+                    rmd160  ea3c015b2a65bda6a8f516c140f531cb33942beb \
+                    asterisk-extra-sounds-fr-ulaw-1.4.11.tar.gz \
+                    md5     7b2050a9e2363104b12f7394ca2db8d1 \
+                    sha1    b252e1da167c6451594648dc002a79e668645a2c \
+                    rmd160  d85ce990f78ff61810fc42f1dab259b109714c0d \
+                    asterisk-extra-sounds-fr-alaw-1.4.11.tar.gz \
+                    md5     6423eeab5fa32797f318147095bdfbb1 \
+                    sha1    0f03bbb37ae89445a0db13e7f157a312ba6f1514 \
+                    rmd160  30a225dbe628ce76f0d38797586965a4e928bac8 \
+                    asterisk-extra-sounds-fr-gsm-1.4.11.tar.gz \
+                    md5     bd72c1f57f9e1ab64ee109612aa2ae7b \
+                    sha1    445bb0689d4f5c758ac53b852c64031b860b8b2a \
+                    rmd160  6f453a5b06e4fb6c924bc1957cfe5d045e687c99 \
+                    asterisk-extra-sounds-fr-g729-1.4.11.tar.gz \
+                    md5     a06e5e08335df9d2ec2617095998b638 \
+                    sha1    5e1b56fe907d8ea49c3b6d852a7cb52f5ee456b4 \
+                    rmd160  3a5574eb1d2fda9ca905a39cd781dde626574b3e \
+                    asterisk-extra-sounds-fr-g722-1.4.11.tar.gz \
+                    md5     3253a6c1ff07301f63b069aaa911c132 \
+                    sha1    3568cd1b926c420bfd33b909513f70dfd146450a \
+                    rmd160  1ac1b7a5dd569cf57015370bc0e0856636c26ffd \
+                    asterisk-extra-sounds-fr-sln16-1.4.11.tar.gz \
+                    md5     76e559d433fba3b0017d4a5635319b86 \
+                    sha1    a6dc0b0dce11e7be2781fc81eff535d7c053f2c7 \
+                    rmd160  9b6da95b22f46fda297c01954a2741cd0528d486 \
+                    asterisk-extra-sounds-fr-siren7-1.4.11.tar.gz \
+                    md5     64b4115558eeb1d0d501f9da96852eff \
+                    sha1    9927bb2378854574e19b55075058ac968c6f9fca \
+                    rmd160  a9c93636d745481b9b9d18e42b6542904ae814c6 \
+                    asterisk-extra-sounds-fr-siren14-1.4.11.tar.gz \
+                    md5     4e1daf6f7f1e74447719ef070cdcab39 \
+                    sha1    f1d1d5af1fd82b57bab9e9b384a821b28acb2518 \
+                    rmd160  24380e449ae1fb838d76da68283b2f87d27ba9c6
+
+
+# Is there some way of doing something like the following where the regexp gets evaluated for each distfile?
+#extract.post_args-append   "-C [lindex [regexp -inline {${name}-(\\w*)-} ${distfile} ] 1] -xf -"
+
+extract {
+    foreach distfile [option extract.only] {
+        regexp "${name}-(\\w*)-" ${distfile} -> lang
+        file mkdir ${worksrcpath}/${lang}
+        system "${extract.cmd} ${extract.pre_args} ${distpath}/${distfile} ${extract.post_args} -C ${worksrcpath}/${lang}"
+    }
+}
+
+build { }
+
+destroot {
+    foreach d [exec find ${worksrcpath} -type d] {
+        xinstall -d ${destroot}${prefix}/var/lib/asterisk/sounds/[lindex [regexp -inline "${worksrcpath}/(.*)" ${d}] 1]
+    }
+    foreach f [exec find ${worksrcpath} -type f] {       
+        xinstall ${f} ${destroot}${prefix}/var/lib/asterisk/sounds/[lindex [regexp -inline "${worksrcpath}/(.*)/" ${f}] 1]
+    }
+}
+
+# Languages
+variant en {
+    if {[variant_isset wav]}     { distfiles-append   ${name}-en-wav-${version}.tar.gz }
+    if {[variant_isset ulaw]}    { distfiles-append   ${name}-en-ulaw-${version}.tar.gz }
+    if {[variant_isset alaw]}    { distfiles-append   ${name}-en-alaw-${version}.tar.gz }
+    if {[variant_isset gsm]}     { distfiles-append   ${name}-en-gsm-${version}.tar.gz }
+    if {[variant_isset g729]}    { distfiles-append   ${name}-en-g729-${version}.tar.gz }
+    if {[variant_isset g722]}    { distfiles-append   ${name}-en-g722-${version}.tar.gz }
+    if {[variant_isset sln16]}   { distfiles-append   ${name}-en-sln16-${version}.tar.gz }
+    if {[variant_isset siren7]}  { distfiles-append   ${name}-en-siren7-${version}.tar.gz }
+    if {[variant_isset siren14]} { distfiles-append   ${name}-en-siren14-${version}.tar.gz }
+}
+
+variant fr {
+    if {[variant_isset wav]}     { distfiles-append   ${name}-fr-wav-${version}.tar.gz }
+    if {[variant_isset ulaw]}    { distfiles-append   ${name}-fr-ulaw-${version}.tar.gz }
+    if {[variant_isset alaw]}    { distfiles-append   ${name}-fr-alaw-${version}.tar.gz }
+    if {[variant_isset gsm]}     { distfiles-append   ${name}-fr-gsm-${version}.tar.gz }
+    if {[variant_isset g729]}    { distfiles-append   ${name}-fr-g729-${version}.tar.gz }
+    if {[variant_isset g722]}    { distfiles-append   ${name}-fr-g722-${version}.tar.gz }
+    if {[variant_isset sln16]}   { distfiles-append   ${name}-fr-sln16-${version}.tar.gz }
+    if {[variant_isset siren7]}  { distfiles-append   ${name}-fr-siren7-${version}.tar.gz }
+    if {[variant_isset siren14]} { distfiles-append   ${name}-fr-siren14-${version}.tar.gz }
+}
+
+#Formats 
+variant wav {}
+
+variant ulaw {}
+
+variant alaw {}
+
+variant gsm {}
+
+variant g729 {}
+
+variant g722 {}
+
+variant sln16 {}
+
+variant siren7 {}
+
+variant siren14 {}
+
+

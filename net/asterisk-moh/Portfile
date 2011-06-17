@@ -1,0 +1,126 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; truncate-lines: t; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:et:sw=4:ts=4:sts=4
+# $Id: Portfile 71540 2010-09-16 03:39:03Z jmr@macports.org $
+
+PortSystem          1.0
+
+name                asterisk-moh
+version             2.03
+license             GPLv2
+categories          net
+platforms           darwin
+maintainers         
+
+description         Music on Hold for the Asterisk Open Source PBX and telephony toolkit
+                
+homepage            http://www.asterisk.org
+master_sites        http://downloads.asterisk.org/pub/telephony/sounds/releases/                    
+
+default_variants    +gsm
+
+distfiles           
+
+use_configure       no
+
+checksums           asterisk-moh-opsound-wav-2.03.tar.gz \
+                    md5     8277e2c693fd056773b1c15e4d52077d \
+                    sha1    f40fd6ea03dfe8d72ada2540b2288bfdc006381d \
+                    rmd160  9566974a836051e08f51412de508d92bf3be7e02 \
+                    asterisk-moh-opsound-ulaw-2.03.tar.gz \
+                    md5     d5107998109f3bda5f528e548dd838dc \
+                    sha1    9a76ab8df3e4f704a7d5760a08d0bf38282e9bde \
+                    rmd160  2cc4aadf3bba43c0540ab7457340b3e4b0683577 \
+                    asterisk-moh-opsound-alaw-2.03.tar.gz \
+                    md5     386b8acb431760ea40d405fec69f67bb \
+                    sha1    297a53a16da18c8c507a8a83de4ce6252fee113a \
+                    rmd160  092e941c2d444d140c1da47bdf103c33cbb98c61 \
+                    asterisk-moh-opsound-gsm-2.03.tar.gz \
+                    md5     09066f55f1358f298bc1a6e4678a3ddf \
+                    sha1    0d58a6db46ba2d1effe50a3dd6afaa084f548621 \
+                    rmd160  ab80258f3abc0a0bc9b6eb37bbd27c5a15940f69 \
+                    asterisk-moh-opsound-g729-2.03.tar.gz \
+                    md5     6c3b81fa38c5e940932f5e7600c94a11 \
+                    sha1    41e47e8a063561d663c216a0118090204103e9c6 \
+                    rmd160  36feb01ed9ee77d97c1803ac68b6866952934f0d \
+                    asterisk-moh-opsound-g722-2.03.tar.gz \
+                    md5     c1c4218146c589d519a273bbd43ec178 \
+                    sha1    ae5a0ebef5c24aa14abc5eca7e65c76451768035 \
+                    rmd160  ea54bab4f8fb7311cd579efb6e79766c426f0e1b \
+                    asterisk-moh-opsound-sln16-2.03.tar.gz \
+                    md5     b03b7f24d444a67b35d67e98d3d52574 \
+                    sha1    b20fd1a9d3d6a5f51c52bbffed784b7a2369f4cc \
+                    rmd160  0594b15a95d102f04a19b04529b9f6c83f31acda \
+                    asterisk-moh-opsound-siren7-2.03.tar.gz \
+                    md5     cbbdcb867116f3ff312941d14157bca9 \
+                    sha1    2b1e51bcf912f4bb1e493496de46c64e1e1f4bd0 \
+                    rmd160  6615f98452025dee55dfe8390226fb64b5000061 \
+                    asterisk-moh-opsound-siren14-2.03.tar.gz \
+                    md5     16c5e37d8582ed1f42e1322be009d422 \
+                    sha1    de00a375dfec12b863a362a5f9f6f2a2f0e60365 \
+                    rmd160  8ee7a015ded0948d4eb465b99315db4023b78c14
+
+build {
+    if {[variant_isset ilbc]} {
+        system "pwd"
+        exec rasterisk -x
+
+#to ilbc
+#for a in *.wav; do rasterisk -x "file convert /var/lib/asterisk/sounds/custom/$a /var/lib/asterisk/sounds/custom/`echo $a|sed "s/.wav/.ilbc/"`"; done;
+#to g729
+#for a in *.wav; do rasterisk -x "file convert /var/lib/asterisk/sounds/custom/$a /var/lib/asterisk/sounds/custom/`echo $a|sed "s/.wav/.g729/"`"; done;
+#Much better that way
+
+    }
+}
+
+destroot {
+    foreach d [exec find ${worksrcpath} -type d] {
+        xinstall -d ${destroot}${prefix}/var/lib/asterisk/moh/[lindex [regexp -inline "${worksrcpath}/(.*)" ${d}] 1]
+    }
+    foreach f [exec find ${worksrcpath} -type f] {       
+        xinstall ${f} ${destroot}${prefix}/var/lib/asterisk/moh/[lindex [regexp -inline "${worksrcpath}/(.*)/" ${f}] 1]
+    }
+}
+
+# Core Formats that we can just download
+variant wav {
+    distfiles-append ${name}-opsound-wav-${version}.tar.gz
+}
+
+variant ulaw {
+    distfiles-append ${name}-opsound-ulaw-${version}.tar.gz
+}
+
+variant alaw {
+    distfiles-append ${name}-opsound-alaw-${version}.tar.gz
+}
+
+variant gsm {
+    distfiles-append ${name}-opsound-gsm-${version}.tar.gz
+}
+
+variant g729 {
+    distfiles-append ${name}-opsound-g729-${version}.tar.gz
+}
+
+variant g722 {
+    distfiles-append ${name}-opsound-g722-${version}.tar.gz
+}
+
+variant sln16 {
+    distfiles-append ${name}-opsound-sln16-${version}.tar.gz
+}
+
+variant siren7 {
+    distfiles-append ${name}-opsound-siren7-${version}.tar.gz
+}
+
+variant siren14 {
+    distfiles-append ${name}-opsound-siren14-${version}.tar.gz
+}
+
+# Other formats that we must convert ourselves from wav files
+variant ilbc requires wav {
+    depends_build-append  port:asterisk
+}
+
+

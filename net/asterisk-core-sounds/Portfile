@@ -1,0 +1,259 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; truncate-lines: t; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:et:sw=4:ts=4:sts=4
+# $Id: Portfile 71540 2010-09-16 03:39:03Z jmr@macports.org $
+
+PortSystem          1.0
+
+name                asterisk-core-sounds
+version             1.4.20
+license             GPLv2
+categories          net
+platforms           darwin
+maintainers         
+
+description         Core Sound files for the Asterisk Open Source PBX and telephony toolkit
+                
+homepage            http://www.asterisk.org
+master_sites        http://downloads.asterisk.org/pub/telephony/sounds/releases/                    
+
+default_variants    +en +gsm
+
+distfiles
+
+use_configure       no
+
+checksums           asterisk-core-sounds-en-wav-1.4.20.tar.gz \
+                    md5     8666b26ee4ed215b3de9eb101a686908 \
+                    sha1    ca0433215cfad4cf053fafb4628f8824849b05f5 \
+                    rmd160  ebac7ed57f667d1ebb8fbf421532ce05ae87dee4 \
+                    asterisk-core-sounds-en-ulaw-1.4.20.tar.gz \
+                    md5     f23a8d615c783a87f72f6aa13403e4fd \
+                    sha1    745387a924ecbf99d5bfcdc6b48d63c3ced9d961 \
+                    rmd160  956bef876f36a64171a5336a4eb041bfceb6a1fc \
+                    asterisk-core-sounds-en-alaw-1.4.20.tar.gz \
+                    md5     971fd6a051a7e602c678674d5197340d \
+                    sha1    c37e28a8d3ab9ee7cca17666732dab6a83b4b486 \
+                    rmd160  3adc6e64c1d7947303377f0762085a881c91f612 \
+                    asterisk-core-sounds-en-gsm-1.4.20.tar.gz \
+                    md5     5f2180c6166578d302263eb6f1defb96 \
+                    sha1    ff59e3dd4709af48faf67c2cec28968bdcd62e4d \
+                    rmd160  42b9855d42d4e932aead2eceae2fb1ca9fedb08b \
+                    asterisk-core-sounds-en-g729-1.4.20.tar.gz \
+                    md5     b0ec575ae180bc9030685253113eabe4 \
+                    sha1    a685aeb065da3ef077a3e20499d4113333a30a46 \
+                    rmd160  d6a7ae34edcc6f5c47c2662fb3dfc1fd2189c43f \
+                    asterisk-core-sounds-en-g722-1.4.20.tar.gz \
+                    md5     862819cc65a33e34ef6d5a473c32f172 \
+                    sha1    3ce8e9d1d14af72bbd126169858e0d21199641fc \
+                    rmd160  48207ba06f713956c9dedfbcd19cace115b9ce44 \
+                    asterisk-core-sounds-en-sln16-1.4.20.tar.gz \
+                    md5     1400a3b5fbaac50b4dee3f30f1bb7094 \
+                    sha1    13506cb051a993f9bf7b24759b36b8007310cbd6 \
+                    rmd160  dbb57a62ad524971985e4c9284a991643e5a302c \
+                    asterisk-core-sounds-en-siren7-1.4.20.tar.gz \
+                    md5     2df84acf5edabbcbcf8e9a5b7fcd0b62 \
+                    sha1    a01dcdab52397cd228a2b8938994b697a6e022aa \
+                    rmd160  bfa7aeb2548e3c463a92e4bb83b8d6c1eb7f527c \
+                    asterisk-core-sounds-en-siren14-1.4.20.tar.gz \
+                    md5     2410af6dca67336af2e58fb9b192586c \
+                    sha1    dc4c5188102826bc9cbaa2a027652d0f01bb591d \
+                    rmd160  a9c0a9b5a4adecaac86fa7d6d2d35e31d9c61539 \
+                    asterisk-core-sounds-en_AU-wav-1.4.20.tar.gz \
+                    md5     7131b3b688db6855906325084e7fb541 \
+                    sha1    ced76b2b7674e9b6a966003972b996e0f5203ac1 \
+                    rmd160  b47bcb9b5552e4e68cd073c88f936d5e258f6cf4 \
+                    asterisk-core-sounds-en_AU-ulaw-1.4.20.tar.gz \
+                    md5     b40f2ce267ac3701e2be8ec95ea0f421 \
+                    sha1    99370fa07a01079d77409f149683d7286f51ba10 \
+                    rmd160  e227fa63f58400c3ee2ebe11842c34db1725b804 \
+                    asterisk-core-sounds-en_AU-alaw-1.4.20.tar.gz \
+                    md5     8a225b8f42b6e69f7a803f40414cd864 \
+                    sha1    4e00efd150dec7b928a74ad286f839076736c09b \
+                    rmd160  a29a63fb4341646675beee2d6b350fe3bad1217e \
+                    asterisk-core-sounds-en_AU-gsm-1.4.20.tar.gz \
+                    md5     c0d2d38323e4a6296aca105c393f6477 \
+                    sha1    438d4ddeafe175d74b55a2d2d235c586f7bf5742 \
+                    rmd160  f2a1f0cba8adaded6a324c179041263addad3d4c \
+                    asterisk-core-sounds-en_AU-g729-1.4.20.tar.gz \
+                    md5     79e55450a43e4608e8f14d79045f80d5 \
+                    sha1    af718e2a01b3d5a936da3784541546e999cbb9c5 \
+                    rmd160  e19e8cdc355f7a71fa2e8c30fc63b90c6b29c325 \
+                    asterisk-core-sounds-en_AU-g722-1.4.20.tar.gz \
+                    md5     46f5bbb124ba257d5b21bda3c8c806ef \
+                    sha1    165b4a0accb551888fb8921cd8304c01d113a527 \
+                    rmd160  1d1c2a64587fdf6a5b18a6a1dffbb0c3873baec6 \
+                    asterisk-core-sounds-en_AU-sln16-1.4.20.tar.gz \
+                    md5     5adbe3ea13ad4809b1c20b47fb19babe \
+                    sha1    970b227670b377c713daa44974b81f4122d84c50 \
+                    rmd160  9aeda8ef11fae1d3c5b9c7f53f41dd2689bda977 \
+                    asterisk-core-sounds-en_AU-siren7-1.4.20.tar.gz \
+                    md5     fad3261e54070a8e67ef4ed0eeab8636 \
+                    sha1    c7cebc14aa380445746c7fee0e106f61fb004a8c \
+                    rmd160  ed4acc284807dfe5769dd3ce0d078b4be3022ed0 \
+                    asterisk-core-sounds-en_AU-siren14-1.4.20.tar.gz \
+                    md5     3439ef7ed3189f7c37d4485908362a7d \
+                    sha1    edcfdfa9f940caf0753794c9614d221f1aa08e6e \
+                    rmd160  c0e6dac1fe3d0192e133f5294a90f5f67eb78db2 \
+                    asterisk-core-sounds-es-wav-1.4.20.tar.gz \
+                    md5     368821ed1d0eae27bd7b28d22521cee2 \
+                    sha1    7daca7411d1891e3063a8a8cf4c5e84ed5d62660 \
+                    rmd160  61cbab12486f9952544549329681931fc5261405 \
+                    asterisk-core-sounds-es-ulaw-1.4.20.tar.gz \
+                    md5     967df5bc9ceda346aefe8b15aade31ab \
+                    sha1    43dfb27a36a43902e941257a669025e1b57a8692 \
+                    rmd160  cfc6dbcf6ad0cff0703e6809e631d1fd8b10bd32 \
+                    asterisk-core-sounds-es-alaw-1.4.20.tar.gz \
+                    md5     6438848c56c8b6ed9d48ab2d11d859e6 \
+                    sha1    0bf87e217695f13c74d463d70139529a623869ed \
+                    rmd160  571420d75307baf2b77146897532a55a6191f986 \
+                    asterisk-core-sounds-es-gsm-1.4.20.tar.gz \
+                    md5     beb061f7098cff3ecf907744f2def2ee \
+                    sha1    904fcf0ab230ea68314294c532f99c86cf17d952 \
+                    rmd160  71d948172f84c094cd75593186a2c23291e6b925 \
+                    asterisk-core-sounds-es-g729-1.4.20.tar.gz \
+                    md5     426581a21c0a67eedfb3dc50b5650b1c \
+                    sha1    61fa108f9298ea5e04ac71dd8e069ace2f1ef1cd \
+                    rmd160  f5e91769f8e2a45df9564de4a15716a7a86f6571 \
+                    asterisk-core-sounds-es-g722-1.4.20.tar.gz \
+                    md5     33a4c5f3bc83e5ad6c0d8f95d1dc029e \
+                    sha1    8268dfd46b5d838b1052f379a6963eba7ecba1e9 \
+                    rmd160  cb492d8922a2d35e7fdbdcae3beecce28ade207b \
+                    asterisk-core-sounds-es-sln16-1.4.20.tar.gz \
+                    md5     18eaafe830c763eb5cfe204e7506708c \
+                    sha1    f9195bd1add74e166b79e2e63853e0b3c5e19b1e \
+                    rmd160  6257e863a16a97ace0205d990e3943e3218ca81f \
+                    asterisk-core-sounds-es-siren7-1.4.20.tar.gz \
+                    md5     22ecfaffdfdf652c0bf12faa02ae9b56 \
+                    sha1    004a37acda9a1732c7a816f2c135563f89a01172 \
+                    rmd160  a6377326dcd5bd2d64aa1d1d4ebbf377c87e859f \
+                    asterisk-core-sounds-es-siren14-1.4.20.tar.gz \
+                    md5     776abded14e84aef5ce396aaa3b28e7b \
+                    sha1    d7d91d12624cc53ca8ee6e9b8222484ae01baacf \
+                    rmd160  4934f162477ae05ae04884745df72a62a8b377d8 \
+                    asterisk-core-sounds-fr-wav-1.4.20.tar.gz \
+                    md5     43dc2915cb047b068ca927311ac837ca \
+                    sha1    c18275e16476500af26d041fcb4b3125b3074aab \
+                    rmd160  3f194c4490223dfa141bfae3cfac27182269f018 \
+                    asterisk-core-sounds-fr-ulaw-1.4.20.tar.gz \
+                    md5     e72f3105464f772b2aa55be48df92fee \
+                    sha1    73be11542a282f0bac872f54f843f2e9a08e0c5c \
+                    rmd160  8aa7883dd696ff234b32ea1ac5405cbffb74ba7d \
+                    asterisk-core-sounds-fr-alaw-1.4.20.tar.gz \
+                    md5     9de891d55e80ec2b72c522d0073e2dc3 \
+                    sha1    ddab3b32661463b171056376119ba7c7227ef2e7 \
+                    rmd160  4129657a9974529bdca395fbc170b5a516564ce2 \
+                    asterisk-core-sounds-fr-gsm-1.4.20.tar.gz \
+                    md5     74aaa9a1971e7b8df842945be2b4b9b2 \
+                    sha1    a7969dc852b4d5c326ef15ac6e080793f902eabc \
+                    rmd160  1af7f178d3568b56fdb55986b46d6601dae14a5b \
+                    asterisk-core-sounds-fr-g729-1.4.20.tar.gz \
+                    md5     c0a7672d25f613959b9b6a561b9cd73c \
+                    sha1    837cad79e115d0bcdd0432a3486cf834699c4a0a \
+                    rmd160  77d2d0aa7c23e49edb8881f95f422503cfc6afd7 \
+                    asterisk-core-sounds-fr-g722-1.4.20.tar.gz \
+                    md5     ed4e0d18fe700ade459f0c448ecca174 \
+                    sha1    445fd12f1072d11189b042151ba75f044d3b6366 \
+                    rmd160  bb10a0d12e808aee1ee44fa70fb5883d23f63727 \
+                    asterisk-core-sounds-fr-sln16-1.4.20.tar.gz \
+                    md5     e9c33aa012fd496631145205b2d9bdea \
+                    sha1    381b450fda9596dc4b5acd2dcf4316526785270c \
+                    rmd160  cec1b0142676267ae0533ca01a646fc462359939 \
+                    asterisk-core-sounds-fr-siren7-1.4.20.tar.gz \
+                    md5     237db6104501b0eae17202642fde7c02 \
+                    sha1    74a28311d5c4e04b1c0c57d077c28a0644efd350 \
+                    rmd160  72ceecc0aa29ad6b6613f99e6505ccb4347eb5ff \
+                    asterisk-core-sounds-fr-siren14-1.4.20.tar.gz \
+                    md5     8c5de1aa03e8590d106059c6a58d2528 \
+                    sha1    56f9ebd06de3f7cd14bae5c670d3fdb65edf3e3d \
+                    rmd160  427342edf004aff9f91bc03722c433d5fdc51a64
+
+# Is there some way of doing something like the following where the regexp gets evaluated for each distfile?
+#extract.post_args-append   "-C [lindex [regexp -inline {${name}-(\\w*)-} ${distfile} ] 1] -xf -"
+
+extract {
+    foreach distfile [option extract.only] {
+        regexp "${name}-(\\w*)-" ${distfile} -> lang
+        file mkdir ${worksrcpath}/${lang}
+        system "${extract.cmd} ${extract.pre_args} ${distpath}/${distfile} ${extract.post_args} -C ${worksrcpath}/${lang}"
+    }
+}
+
+build { }
+
+destroot {
+    foreach d [exec find ${worksrcpath} -type d] {
+        xinstall -d ${destroot}${prefix}/var/lib/asterisk/sounds/[lindex [regexp -inline "${worksrcpath}/(.*)" ${d}] 1]
+    }
+    foreach f [exec find ${worksrcpath} -type f] {       
+        xinstall ${f} ${destroot}${prefix}/var/lib/asterisk/sounds/[lindex [regexp -inline "${worksrcpath}/(.*)/" ${f}] 1]
+    }
+}
+
+# Languages
+variant en {
+    if {[variant_isset wav]}     { distfiles-append   ${name}-en-wav-${version}.tar.gz }
+    if {[variant_isset ulaw]}    { distfiles-append   ${name}-en-ulaw-${version}.tar.gz }
+    if {[variant_isset alaw]}    { distfiles-append   ${name}-en-alaw-${version}.tar.gz }
+    if {[variant_isset gsm]}     { distfiles-append   ${name}-en-gsm-${version}.tar.gz }
+    if {[variant_isset g729]}    { distfiles-append   ${name}-en-g729-${version}.tar.gz }
+    if {[variant_isset g722]}    { distfiles-append   ${name}-en-g722-${version}.tar.gz }
+    if {[variant_isset sln16]}   { distfiles-append   ${name}-en-sln16-${version}.tar.gz }
+    if {[variant_isset siren7]}  { distfiles-append   ${name}-en-siren7-${version}.tar.gz }
+    if {[variant_isset siren14]} { distfiles-append   ${name}-en-siren14-${version}.tar.gz }
+}
+
+variant en_au {
+    if {[variant_isset wav]}     { distfiles-append   ${name}-en_AU-wav-${version}.tar.gz }
+    if {[variant_isset ulaw]}    { distfiles-append   ${name}-en_AU-ulaw-${version}.tar.gz }
+    if {[variant_isset alaw]}    { distfiles-append   ${name}-en_AU-alaw-${version}.tar.gz }
+    if {[variant_isset gsm]}     { distfiles-append   ${name}-en_AU-gsm-${version}.tar.gz }
+    if {[variant_isset g729]}    { distfiles-append   ${name}-en_AU-g729-${version}.tar.gz }
+    if {[variant_isset g722]}    { distfiles-append   ${name}-en_AU-g722-${version}.tar.gz }
+    if {[variant_isset sln16]}   { distfiles-append   ${name}-en_AU-sln16-${version}.tar.gz }
+    if {[variant_isset siren7]}  { distfiles-append   ${name}-en_AU-siren7-${version}.tar.gz }
+    if {[variant_isset siren14]} { distfiles-append   ${name}-en_AU-siren14-${version}.tar.gz }
+}
+
+variant es {
+    if {[variant_isset wav]}     { distfiles-append   ${name}-es-wav-${version}.tar.gz }
+    if {[variant_isset ulaw]}    { distfiles-append   ${name}-es-ulaw-${version}.tar.gz }
+    if {[variant_isset alaw]}    { distfiles-append   ${name}-es-alaw-${version}.tar.gz }
+    if {[variant_isset gsm]}     { distfiles-append   ${name}-es-gsm-${version}.tar.gz }
+    if {[variant_isset g729]}    { distfiles-append   ${name}-es-g729-${version}.tar.gz }
+    if {[variant_isset g722]}    { distfiles-append   ${name}-es-g722-${version}.tar.gz }
+    if {[variant_isset sln16]}   { distfiles-append   ${name}-es-sln16-${version}.tar.gz }
+    if {[variant_isset siren7]}  { distfiles-append   ${name}-es-siren7-${version}.tar.gz }
+    if {[variant_isset siren14]} { distfiles-append   ${name}-es-siren14-${version}.tar.gz }
+}
+
+variant fr {
+    if {[variant_isset wav]}     { distfiles-append   ${name}-fr-wav-${version}.tar.gz }
+    if {[variant_isset ulaw]}    { distfiles-append   ${name}-fr-ulaw-${version}.tar.gz }
+    if {[variant_isset alaw]}    { distfiles-append   ${name}-fr-alaw-${version}.tar.gz }
+    if {[variant_isset gsm]}     { distfiles-append   ${name}-fr-gsm-${version}.tar.gz }
+    if {[variant_isset g729]}    { distfiles-append   ${name}-fr-g729-${version}.tar.gz }
+    if {[variant_isset g722]}    { distfiles-append   ${name}-fr-g722-${version}.tar.gz }
+    if {[variant_isset sln16]}   { distfiles-append   ${name}-fr-sln16-${version}.tar.gz }
+    if {[variant_isset siren7]}  { distfiles-append   ${name}-fr-siren7-${version}.tar.gz }
+    if {[variant_isset siren14]} { distfiles-append   ${name}-fr-siren14-${version}.tar.gz }
+}
+
+#Formats 
+variant wav {}
+
+variant ulaw {}
+
+variant alaw {}
+
+variant gsm {}
+
+variant g729 {}
+
+variant g722 {}
+
+variant sln16 {}
+
+variant siren7 {}
+
+variant siren14 {}
+
+

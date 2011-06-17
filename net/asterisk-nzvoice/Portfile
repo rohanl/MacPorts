@@ -1,0 +1,36 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; truncate-lines: t; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:et:sw=4:ts=4:sts=4
+# $Id: Portfile 71540 2010-09-16 03:39:03Z jmr@macports.org $
+
+PortSystem          1.0
+
+name                asterisk-nzvoice
+#version             32
+version             2.0
+license             GPLv2
+categories          net
+platforms           darwin
+maintainers         
+
+description         NZ Voices for Asterisk
+                
+homepage            http://voiceprompt.archnetnz.com
+master_sites        sourceforge:nzvoice
+distname            nzvoice-${version}-GSM
+extract.mkdir       yes
+
+checksums           md5     e674254ad5155db558e1af68350f6c50 \
+                    sha1    700d1db9910bc7ef8e57b8903ac661d97b694f5d \
+                    rmd160  1e3518dad5c1d490c6cb133cda07a7ce6780221c
+
+
+use_configure       no
+build { }
+
+destroot {
+    foreach d [exec find ${worksrcpath} -type d] {
+        xinstall -d ${destroot}${prefix}/var/lib/asterisk/sounds/en_NZ/[lindex [regexp -inline "${worksrcpath}/(.*)" ${d}] 1]
+    }
+    foreach f [exec find ${worksrcpath} -type f] {       
+        xinstall ${f} ${destroot}${prefix}/var/lib/asterisk/sounds/en_NZ/[lindex [regexp -inline "${worksrcpath}/(.*)/" ${f}] 1]
+    }
+}
